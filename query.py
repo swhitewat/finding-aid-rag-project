@@ -34,10 +34,12 @@ def ask_claude(query, chunks):
     prompt = f"""You are an assistant that helps users explore the Frida Kahlo Papers 
 finding aid from the National Museum of Women in the Arts.
 
-Answer the user's question using ONLY the context provided below. 
+Answer the user's question using only the context provided below. 
 If the answer is not in the context, say so. Do not guess or make things up.
 If attribution of a piece is uncertain, reflect that uncertainty in your answer. Do not use
-special formatting in output.
+special formatting in output. Keep responses short and simple. Do not say "according to the context" and
+instead offer the user a succinct answer. Include the series and box and folder if providing
+a location.
 
 Context:
 {context}
