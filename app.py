@@ -18,8 +18,14 @@ collection=client.get_collection(name="finding_aid", embedding_function=ef)
 anthropic_client=anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
 # page stuff
-st.title("final proj")
-user_query = st.text_input("describe your questoin:")
+st.set_page_config(
+    page_title="ISTA 556 Final Project",
+    layout="centered"
+)
+st.title("Finding Aid RAG Project")
+st.subheader("by Samantha Whitewater")
+st.markdown("Using RAG as a tool to improve accessibility of digital archives.")
+user_query = st.text_input("Describe your question:")
 
 if user_query:
     # retrieve chunks
